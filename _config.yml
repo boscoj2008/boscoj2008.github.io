@@ -112,8 +112,8 @@ author:
   bio              : "Data Science Portfolio"
   location         : "Kigali, Rwanda"
   email            :
-  github           : "boscoj2008"
-  linkedin         : "john bosco"  
+  # github           : "boscoj2008"
+  # linkedin         : "john bosco"  
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -145,10 +145,10 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/boscoj2008"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      # url:
+      # url: 
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
