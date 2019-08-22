@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "John Bosco"
-  avatar           : "/images/cogs.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           :  "/images/code.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "Kigali, Rwanda"
   email            :
