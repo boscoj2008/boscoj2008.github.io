@@ -795,7 +795,7 @@ subplot.set_xlabel('ypll rate')
 subplot.set_ylabel('median household income');
 ```
 
-![scatter plot](/images/linear_reg/output_18_0.png.png){:class="img-responsive"}
+![scatter plot](/images/linear_reg/output_18_0.png){:class="img-responsive"}
 <!-- ![png](output_18_0.png) -->
 
 
@@ -839,7 +839,7 @@ for i in range(len(plot)): # plot different attributes
     subplot.set_ylabel(plot[i])
 ```
 
-![attributes vs target variable](/images/linear_reg/output_21_0.png.png){:class="img-responsive"}
+![attributes vs target variable](/images/linear_reg/output_21_0.png){:class="img-responsive"}
 <!-- ![png](output_21_0.png) -->
 
 
@@ -1012,7 +1012,7 @@ subplot.legend(ncol=3);
 
 
 <!-- ![png](output_32_0.png) -->
-![visualising model on data](/images/linear_reg/output_32_0.png.png){:class="img-responsive"}
+![visualising model on data](/images/linear_reg/output_32_0.png){:class="img-responsive"}
 
 
 ## Running the correlations for the < 18 and median household income
@@ -1118,7 +1118,7 @@ subplot.legend(ncol=4);
 
 
 <!-- ![png](output_39_0.png) -->
-![fitting model on data](/images/linear_reg/output_39_0.png.png){:class="img-responsive"}
+![fitting model on data](/images/linear_reg/output_39_0.png){:class="img-responsive"}
 
 #### YPLL vs.median household income
 
