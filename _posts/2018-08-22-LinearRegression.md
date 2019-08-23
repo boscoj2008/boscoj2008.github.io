@@ -762,6 +762,7 @@ df.info() # check information of data set
     YPLL Rate                      2941 non-null float64
     dtypes: float64(10), int64(7), object(2)
     memory usage: 459.5+ KB
+
 - HIV Rate and free lunch still have missing values and need to be imputed! Let's impute for them
 
 
