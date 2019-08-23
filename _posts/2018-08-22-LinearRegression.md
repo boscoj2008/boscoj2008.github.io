@@ -20,31 +20,9 @@ To calculate the years of potential life lost or YPPL, an upper reference age is
 Now, let's get into the data. First step of any data science project is to clean the data. This may include handling missing values if any, normalizing our data, perfoming One Hot encoding for categorical variables etc. Machine learning models do not work if our data have missing values so it's very important that we check for missing values.
 
 python code block to import data analysis packages:
-```python
-# import data analysis libraries
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 
-
-# import ols from sklearn / predictive modeling
-from statsmodels.api import OLS
-
-# turn off future warnings
-import warnings
-warnings.filterwarnings(action='ignore')
-
-
-# normalising packages
-from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler, MaxAbsScaler
-```
-
-```python
-ypll = pd.read_csv('ypll.csv') # import data
-ypll.head() # view the first 5 rows
-```
 <!-- image: "/images/linear_reg/regression.jpg" -->
-![image-title-here](/images/linear_reg/yppl_head.png){:class="img-responsive"}
+<!-- ![image-title-here](/images/linear_reg/yppl_head.png){:class="img-responsive"} -->
 
 
 
@@ -817,8 +795,8 @@ subplot.set_xlabel('ypll rate')
 subplot.set_ylabel('median household income');
 ```
 
-
-![png](output_18_0.png)
+![scatter plot](/images/linear_reg/output_18_0.png.png){:class="img-responsive"}
+<!-- ![png](output_18_0.png) -->
 
 
 ### visualising other variables vs ypll
@@ -861,8 +839,8 @@ for i in range(len(plot)): # plot different attributes
     subplot.set_ylabel(plot[i])
 ```
 
-
-![png](output_21_0.png)
+![attributes vs target variable](/images/linear_reg/output_21_0.png.png){:class="img-responsive"}
+<!-- ![png](output_21_0.png) -->
 
 
 
@@ -1033,8 +1011,8 @@ subplot.legend(ncol=3);
 ```
 
 
-![png](output_32_0.png)
-
+<!-- ![png](output_32_0.png) -->
+![visualising model on data](/images/linear_reg/output_32_0.png.png){:class="img-responsive"}
 
 
 ## Running the correlations for the < 18 and median household income
@@ -1139,8 +1117,8 @@ subplot.legend(ncol=4);
 ```
 
 
-![png](output_39_0.png)
-
+<!-- ![png](output_39_0.png) -->
+![fitting model on data](/images/linear_reg/output_39_0.png.png){:class="img-responsive"}
 
 #### YPLL vs.median household income
 
@@ -1243,8 +1221,8 @@ subplot.plot(X, Y, color='black', label='models best fit')
 subplot.legend(ncol=4);
 ```
 
-
-![png]("/images/linear_reg/output_46_0.png")
+![image-title-here](/images/linear_reg/output_46_0.png){:class="img-responsive"}
+<!-- ![png]("/images/linear_reg/output_46_0.png) -->
 
 
 ### Multiple Linear regression
