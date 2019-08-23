@@ -29,7 +29,6 @@ import matplotlib.pyplot as plt
 
 # import ols from sklearn / predictive modeling
 from statsmodels.api import OLS
-import pandas_profiling as pp
 
 # turn off future warnings
 import warnings
@@ -39,3 +38,9 @@ warnings.filterwarnings(action='ignore')
 # normalising packages
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler, MaxAbsScaler
 ```
+
+```python
+ypll = pd.read_csv('ypll.csv') # import data
+ypll.head() # view the first 5 rows
+```
+image: "/images/linear_reg/regression.jpg"
