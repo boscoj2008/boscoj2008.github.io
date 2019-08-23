@@ -42,6 +42,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler, Ma
 ```python
 ypll = pd.read_csv('ypll.csv') # import data
 ypll.head() # view the first 5 rows
+![image-title-here](/images/linear_reg/yppl_head.png){:class="img-responsive"}
 ```
 <!-- image: "/images/linear_reg/regression.jpg" -->
 ![image-title-here](/images/linear_reg/yppl_head.png){:class="img-responsive"}
