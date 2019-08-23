@@ -30,6 +30,8 @@ python code block to import data analysis packages:
 # import data analysis libraries
 import pandas as pd
 import numpy as np
+
+# import plotting library matplotlib
 import matplotlib.pyplot as plt
 
 
@@ -47,8 +49,8 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler, Ma
 
 
 ```python
-ypll = pd.read_csv('ypll.csv')
-ypll.head()
+ypll = pd.read_csv('ypll.csv') # load data
+ypll.head() # view first 5 rows
 ```
 
 
@@ -128,8 +130,8 @@ ypll.head()
 
 
 ```python
-add_measures = pd.read_csv('additional_measures_cleaned.csv')
-add_measures.head()
+add_measures = pd.read_csv('additional_measures_cleaned.csv') # import and load data
+add_measures.head() # view first 5 rows
 ```
 
 
@@ -287,7 +289,7 @@ add_measures.head()
 
 
 ```python
-ypll.info()
+ypll.info() # check dataset information
 ```
 
     <class 'pandas.core.frame.DataFrame'>
@@ -304,12 +306,13 @@ ypll.info()
 
 
 ```python
-ypll.drop(index=ypll[ypll.Unreliable.isin(['x'])].index, inplace=True)
+# drop countries where data was deemed unreliable, marked by x
+ypll.drop(index=ypll[ypll.Unreliable.isin(['x'])].index, inplace=True) 
 ```
 
 
 ```python
-add_measures.info()
+add_measures.info() # check dataset information
 ```
 
     <class 'pandas.core.frame.DataFrame'>
@@ -339,17 +342,19 @@ add_measures.info()
 
 
 ```python
-add_measures.drop(index=add_measures[add_measures['% child Illiteracy'].isnull()].index, inplace=True)
+# drop rows where column % child illiteracy has missing values
+add_measures.drop(index=add_measures[add_measures['% child Illiteracy'].isnull()].index, inplace=True) 
 ```
 
 
 ```python
+# drop rows where column County has missing values
 add_measures.drop(index=add_measures[add_measures['County'].isnull()].index, inplace=True)
 ```
 
 
 ```python
-ypll.columns
+ypll.columns # view list of columns
 ```
 
 
@@ -380,10 +385,10 @@ cols = [
  '% Free lunch',
  '% child Illiteracy',
  '% Drive Alone'
-]
+] # list of columns or artributes
 
-left = add_measures[cols]
-left.head()
+left = add_measures[cols] # create left dataframe
+left.head() # view the first five rows
 ```
 
 
@@ -535,12 +540,13 @@ left.head()
 
 
 ```python
+# drop rows where the County is missing values
 ypll.drop(index=ypll[ypll.County.isnull()].index, inplace=True)
 ```
 
 
 ```python
-len(ypll)
+len(ypll) # check length of dataframe
 ```
 
 
@@ -552,12 +558,12 @@ len(ypll)
 
 
 ```python
-df = pd.merge(left, ypll, on=['County', 'FIPS'] )
+df = pd.merge(left, ypll, on=['County', 'FIPS'] ) # merge the two data sets to make one dataframe
 ```
 
 
 ```python
-df.head()
+df.head() # view the first five rows of the data
 ```
 
 
@@ -727,9 +733,9 @@ df.head()
 
 
 ```python
-df['YPLL Rate'].fillna(value=df['YPLL Rate'].mean(), inplace=True)
-df.drop(labels=['Unreliable'], inplace=True, axis=1)
-df.info()
+df['YPLL Rate'].fillna(value=df['YPLL Rate'].mean(), inplace=True) # fill missing values with mean of column
+df.drop(labels=['Unreliable'], inplace=True, axis=1) # drop column with NaN's (not neccesary for our analysis)
+df.info() # check information of data set
 ```
 
     <class 'pandas.core.frame.DataFrame'>
@@ -756,11 +762,11 @@ df.info()
     YPLL Rate                      2941 non-null float64
     dtypes: float64(10), int64(7), object(2)
     memory usage: 459.5+ KB
-
+- HIV Rate and free lunch still have missing values and need to be imputed! Let's impute for them
 
 
 ```python
-df['% Free lunch'].fillna(value=df['% Free lunch'].mean(), inplace=True)
+df['% Free lunch'].fillna(value=df['% Free lunch'].mean(), inplace=True) # fill in missing values for these columns
 df['HIV rate'].fillna(value=df['HIV rate'].mean(), inplace=True)
 ```
 
@@ -768,31 +774,31 @@ df['HIV rate'].fillna(value=df['HIV rate'].mean(), inplace=True)
 
 
 ```python
-import seaborn as sns
+import seaborn as sns # another visualisation package for pretty plots
 sns.set()
 ```
 
 
 ```python
-fig = plt.figure(figsize=(10,15))
+fig = plt.figure(figsize=(10,15)) # create figure object
 plt.tight_layout()
-fig.suptitle('Visualising correlations', y=0.9, fontweight=1000)
-subplot = fig.add_subplot(3,1,1)
+fig.suptitle('Visualising correlations', y=0.9, fontweight=1000) # set super title
+subplot = fig.add_subplot(3,1,1) # add subplot with 3 rows and 1 column, choose axis 1
 
-subplot.scatter(df['YPLL Rate'], df['%Diabetes'], color='orange')
-subplot.set_xlabel('ypll rate')
-subplot.set_ylabel('% diabetes')
+subplot.scatter(df['YPLL Rate'], df['%Diabetes'], color='orange') # make scatter plot
+subplot.set_xlabel('ypll rate') # set x label
+subplot.set_ylabel('% diabetes') # y label
 
-subplot = fig.add_subplot(3,1,2)
-subplot.scatter(df['YPLL Rate'], df['< 18'], color='red')
+subplot = fig.add_subplot(3,1,2) # choose axis 2
+subplot.scatter(df['YPLL Rate'], df['< 18'], color='red') # scatter plot
 subplot.set_xlabel('ypll rate')
 subplot.set_ylabel('% < 18')
 
 
-subplot = fig.add_subplot(3,1,3)
-subplot.scatter(df['YPLL Rate'], df['median household income'], color='green')
+subplot = fig.add_subplot(3,1,3) # choose axis 3
+subplot.scatter(df['YPLL Rate'], df['median household income'], color='green') # scatter plot
 subplot.set_xlabel('ypll rate')
-subplot.set_ylabel('median household income');
+subplot.set_ylabel('median household income'); # set titlte
 ```
 
 ![scatter plot](/images/linear_reg/output_18_0.png){:class="img-responsive"}
@@ -821,16 +827,16 @@ plot=[
  '% child Illiteracy',
  '% Drive Alone',
  'YPLL Rate'
-]
+] # columns to plot
 ```
 
 
 ```python
-fig = plt.figure(figsize=(15,35))
+fig = plt.figure(figsize=(15,35)) # create figure object
 # plt.tight_layout()
-fig.suptitle('Visualising correlations', y=0.9, fontweight=1000)
+fig.suptitle('Visualising correlations', y=0.9, fontweight=1000) # set super title
 
-for i in range(len(plot)): # plot different attributes
+for i in range(len(plot)): # plot target against different attributes 
     
     subplot = fig.add_subplot(len(plot),3,i+1)
 
@@ -847,8 +853,8 @@ for i in range(len(plot)): # plot different attributes
 ```python
 # correlation matrix
 # sort by the top 8 values
-cor_matrx=df.corr()
-cor_matrx['YPLL Rate'].sort_values(ascending=False)
+cor_matrx=df.corr() # make a correlation matrix using pearson corr.
+cor_matrx['YPLL Rate'].sort_values(ascending=False) # view correlations on scale -1 to 1
 ```
 
 
@@ -1029,8 +1035,8 @@ y = df['YPLL Rate']
 
 ```python
 # fit and show summary
-model = OLS(y, statsmodels.tools.add_constant(X)).fit()
-model.summary()
+model = OLS(y, statsmodels.tools.add_constant(X)).fit() 
+model.summary() 
 ```
 
 
@@ -1102,16 +1108,16 @@ model.summary()
 
 
 ```python
-fig = plt.figure(figsize=(10,8))
-fig.suptitle('Plot Showing how model fits data', fontweight=1000, y=0.92)
-subplot =fig.add_subplot(111)
-subplot.scatter(X,y, color='darkorange', label='scatter plot')
+fig = plt.figure(figsize=(10,8)) # create figure object
+fig.suptitle('Plot Showing how model fits data', fontweight=1000, y=0.92)# set super title and height position
+subplot =fig.add_subplot(111) # add a subplot with 1 row and column
+subplot.scatter(X,y, color='darkorange', label='scatter plot') # make scatter plot
 subplot.set_xlabel('< 18')
 subplot.set_ylabel('YPLL Rate')
 
 # y = mx + c
-Y = model.params.values[1] * X + model.params.values[0]
-subplot.plot(X, Y, color='black', label='models best fit')
+Y = model.params.values[1] * X + model.params.values[0] 
+subplot.plot(X, Y, color='black', label='models best fit') # plot model line on scatter plot
 subplot.legend(ncol=4);
 
 ```
@@ -1131,8 +1137,8 @@ y = df['YPLL Rate']
 
 
 ```python
-model = OLS(y, statsmodels.tools.add_constant(X)).fit()
-model.summary()
+model = OLS(y, statsmodels.tools.add_constant(X)).fit() # fit model to data and commute weights and biases
+model.summary() # print model summary and view statistics
 ```
 
 
@@ -1208,16 +1214,16 @@ model.summary()
 
 
 ```python
-fig = plt.figure(figsize=(10,8))
+fig = plt.figure(figsize=(10,8)) # create figure object
 fig.suptitle('Plot Showing how model fits data', fontweight=1000, y=0.92)
-subplot =fig.add_subplot(111)
-subplot.scatter(X,y, color='darkgreen', label='scatter plot')
+subplot =fig.add_subplot(111) # add subplot
+subplot.scatter(X,y, color='darkgreen', label='scatter plot') # make scatter plot
 subplot.set_xlabel('median household income')
 subplot.set_ylabel('YPLL Rate')
 
 # y = mx + c
 Y = model.params.values[1] * X + model.params.values[0]
-subplot.plot(X, Y, color='black', label='models best fit')
+subplot.plot(X, Y, color='black', label='models best fit') # plot model's best fit line
 subplot.legend(ncol=4);
 ```
 
@@ -1250,20 +1256,20 @@ cols_to_use =[
  '%_child_Illiteracy',
  '%_Drive_Alone',
 #  'YPLL_Rate'
-]
+] # these attributes were rigorously run and the irrelevant attributes are commented out as shown 
 
-X = df[cols_to_use]
-X_scaled = scaler.fit_transform(X)
-
+X = df[cols_to_use] # new X or input
 
 
-y = df['YPLL_Rate']
+
+
+y = df['YPLL_Rate'] # output or target variable
 ```
 
 
 ```python
-model = OLS(y, statsmodels.tools.add_constant(X)).fit()
-model.summary()
+model = OLS(y, statsmodels.tools.add_constant(X)).fit() # fit model with data
+model.summary() # print model summary
 ```
 
 
@@ -1365,20 +1371,20 @@ model.summary()
 
 
 ```python
-from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import PolynomialFeatures # helps us fit polynomials to our data for best fit
 ```
 
 
 ```python
-poly_transform = PolynomialFeatures(degree=3)
+poly_transform = PolynomialFeatures(degree=3) # import polynomial feat and instantiate
 
-X_ply = poly_transform.fit_transform(X)
-model = OLS(y, statsmodels.tools.add_constant(X_ply)).fit()
+X_ply = poly_transform.fit_transform(X) # fit and transform input
+model = OLS(y, statsmodels.tools.add_constant(X_ply)).fit() # fit model to data
 ```
 
 
 ```python
-print('R-squared value: {:.2f}'.format(model.rsquared))
+print('R-squared value: {:.2f}'.format(model.rsquared)) # print R squared values
 print('Adjusted R-squared value: {:.2f}'.format(model.rsquared_adj))
 ```
 

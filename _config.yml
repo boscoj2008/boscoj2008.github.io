@@ -147,8 +147,8 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/boscoj2008"
-    # - label: "GitLab"
-      # icon: "fab fa-fw fa-gitlab"
+    - label: "Whatsapp"
+      icon: "fab fa-fw fa-whatsapp"
       # url: 
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
