@@ -11,17 +11,31 @@ excerpt: "Machine Learning, Linear Regression, Polynomial Regression, Data Scien
 
 Linear regression or the ordinary least sqaures method, is a supervised machine learning technique that is used to predict a continuos valued output. Everytime we fit a multiple linear regression model to our data, we compute a set of weights or coefficients, $\beta_0,\beta_1,\beta_2, \beta_3...\beta_n$ where $\beta_0$ is the intercept or the constant plus a bias term also called the error term $\epsilon$.
 
-In this post, I will show you how to build a predictive model using the statsmodel api. Before we get into that, let's talk about the data we will be using. There are two datasets that will be used for this predictive model i.e. [County health rankings](https://www.countyhealthrankings.org/) and in particular the *Years of potential life lost (YPPL)* and *Additional measures*
+In this post, I will show you how to build a predictive model using the statsmodel api. Before we get into that, let's talk about the data we will be using. There are two datasets that will be used for this predictive model i.e. [County health rankings](https://www.countyhealthrankings.org/) and in particular the *[Years of potential life lost (YPPL)](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation/national-data-documentation-2010-2017)* and *Additional measures data* of which you can find the cleaned up versions on my github.
 
-[Years of potential life lost](https://en.wikipedia.org/wiki/Years_of_potential_life_lost) or YPPL is an estimate of the average years a person would have lived if he or she had not died prematurely. It is, therefore, a measure of premature mortality. As an alternative to death rates, it is a method that gives more weight to deaths that occur among younger people. An alternative is to consider the effects of both disability and premature death using disability adjusted life years.
+[Years of potential life lost](https://en.wikipedia.org/wiki/Years_of_potential_life_lost) or YPPL is an estimate of the average years a person would have lived if he or she had not died prematurely. It is, therefore, a measure of premature mortality. As an alternative to death rates, it is a method that gives more weight to deaths that occur among younger people.
 
-To calculate the years of potential life lost, the analyst has to set an upper reference age. The reference age should correspond roughly to the life expectancy of the population under study. In the developed world, this is commonly set at age 75, but it is essentially arbitrary. Thus, PYLL should be written with respect to the reference age used in the calculation: e.g., YPPL[75].
+To calculate the years of potential life lost or YPPL, an upper reference age is determined. The reference age should correspond roughly to the life expectancy of the population under study. In this data, the reference age is 75. So if a person dies at 65, their YPPL is calculated as: 75 - 65 = 10 and so on.
 
-YPPL can be calculated using individual level data or using age grouped data.[2]
+Now, let's get into the data. First step of any data science project is to clean the data. This may include handling missing values if any, normalizing our data, perfoming One Hot encoding for categorical variables etc. Machine learning models do not work if our data have missing values so it's very important that we check for missing values.
 
-Briefly, for the individual method, each person's YPPL is calculated by subtracting the person's age at death from the reference age. If a person is older than the reference age when he or she dies, that person's YPPL is set to zero (i.e., there are no "negative" YPPLs). In effect, only those who die before the reference age are included in the calculation. Some examples:
-1. Reference age = 75; Age at death = 60; PYLL[75] = 75 − 60 = 15
-2. Reference age = 75; Age at death = 60; PYLL[75] = 75 − 60 = 15
-3. Reference age = 75; Age at death = 80; PYLL[75] = 0 (age at death greater than reference age)
+python code block to import data analysis packages:
+```python
+# import data analysis libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
-To calculate the YPLL for a particular population in a particular year, the analyst sums the individual PYLLs for all individuals in that population who died in that year. This can be done for all-cause mortality or for cause-specific mortality.
+
+# import ols from sklearn / predictive modeling
+from statsmodels.api import OLS
+import pandas_profiling as pp
+
+# turn off future warnings
+import warnings
+warnings.filterwarnings(action='ignore')
+
+
+# normalising packages
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler, MaxAbsScaler
+```
