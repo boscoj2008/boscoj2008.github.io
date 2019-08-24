@@ -850,7 +850,7 @@ for i in range(len(plot)): # plot target against different attributes
 <!-- ![png](output_21_0.png) -->
 
 - some variables are not strongly correlated to target or output e.g. FIPS, HIV Rate and population etc
-- other variables like % free lunch have a good correlation with the target variable. At this point we may start thinking that free lunch should no longer be on the offer. But perharps there is a factor playing a hideous role?
+- other variables like diabetes $\&$ % free lunch have a good correlation with the target variable. At this point we may start thinking that free lunch should no longer be on the offer. But perharps there is a factor playing a hideous role?
 - you can check the pearson correlation with the target variable in the code output of the next cell.
 
 
