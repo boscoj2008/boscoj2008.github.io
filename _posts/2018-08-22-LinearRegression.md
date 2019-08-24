@@ -849,6 +849,9 @@ for i in range(len(plot)): # plot target against different attributes
 ![attributes vs target variable](/images/linear_reg/output_21_0.png){:class="img-responsive"}
 <!-- ![png](output_21_0.png) -->
 
+- some variables are not strongly correlated to target or output e.g. FIPS, HIV Rate and population etc
+- other variables like % free lunch have a good correlation with the target variable.
+- you can check the pearson correlation with the target variable in the code output of the next cell.
 
 
 ```python
