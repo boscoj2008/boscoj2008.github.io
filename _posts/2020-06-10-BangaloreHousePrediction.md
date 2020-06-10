@@ -3,7 +3,7 @@ title: "Predictive Modeling: Real estate house prediction in Bangalore, India"
 date: 2020-06-10
 tags: [machine learning, data science, data cleaning, deployment, feature engineering]
 header:
-  image: "/images/bangalore_prediction/home1.jpg"
+  image: "/images/bangalore_prediction/home3.jpeg"
 excerpt: "Machine Learning, Linear Regression, Polynomial Regression, Data Science"
 ---
 
@@ -2432,13 +2432,6 @@ with open("columns.json", mode="w") as f:
 ```
 
 - this model is now ready for production!
-
-
-```python
-
-```
-
-
 
 
 
