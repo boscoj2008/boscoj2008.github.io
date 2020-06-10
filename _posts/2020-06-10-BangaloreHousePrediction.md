@@ -9,7 +9,7 @@ excerpt: "Machine Learning, Linear Regression, Polynomial Regression, Data Scien
 
 # Housing situation in Bangalore, India.
 
-Housing is increasingly becoming a basic need for every human being. This mini paper seeks to provide some insight into this basic need by exploring and analysing the housing property market in Bangalore. Bangalore, sometimes called the silicon valley of India, is the state capital of Karnataka. Located in south, the state is host to over 10 million people making it the third most popular city in India \cite{bangalore_2020}. In terms of activity, it plays a role as the nations chief technology hub and exporter. This is also likely to mean that Bangalore provides a slew of employment opportunities to the Indian population. It is also reasonable to assume this scenario could stress the housing situation. This is not surprising because large cities offer better jobs with higher incomes.  According to the paper of Sheikh [1], the property market in India differs drastically from the rest of the world as it experiences rapid growth among other factors. Property value on the other hand can be difficult to determine. It is not that apparent what drives the cost of residential property in a large and developed city. In addition to this, although budget is a determining factor in property buying, it's not also clear what preferences influence the residential buyer or which ones they choose to prioritize. This mini paper puts some variables under study such as; the area type, availability, location, size, society, total square feet, number of bath rooms, balcony availability and price to understand the scenario in Bangalore.
+Housing is increasingly becoming a basic need for every human being. This mini paper seeks to provide some insight into this basic need by exploring and analysing the housing property market in Bangalore. Bangalore, sometimes called the silicon valley of India, is the state capital of Karnataka. Located in south, the state is host to over 10 million people making it the third most popular city in India. In terms of activity, it plays a role as the nations chief technology hub and exporter. This is also likely to mean that Bangalore provides a slew of employment opportunities to the Indian population. It is also reasonable to assume this scenario could stress the housing situation. This is not surprising because large cities offer better jobs with higher incomes.  According to the paper of Sheikh [1], the property market in India differs drastically from the rest of the world as it experiences rapid growth among other factors. Property value on the other hand can be difficult to determine. It is not that apparent what drives the cost of residential property in a large and developed city. In addition to this, although budget is a determining factor in property buying, it's not also clear what preferences influence the residential buyer or which ones they choose to prioritize. This mini paper puts some variables under study such as; the area type, availability, location, size, society, total square feet, number of bath rooms, balcony availability and price to understand the scenario in Bangalore.
 
 
 # Problem statement
@@ -2440,8 +2440,7 @@ with open("columns.json", mode="w") as f:
 
 - (2020).url:https://www.kaggle.com/amitabhajoy/bengaluru-house-price-data.Sheikh, Wasim, Dash, Mihir, and Sharma, Kshitiz 
 
-
-- (Nov. 2019).Trends in Residential Marketin Bangalore, India.doi:10.13140/RG.2.2.33967.89768.
+- [1] (Nov. 2019).Trends in Residential Marketin Bangalore, India.doi:10.13140/RG.2.2.33967.89768.
 
 
 
