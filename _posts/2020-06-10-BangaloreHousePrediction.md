@@ -3,7 +3,7 @@ title: "Predictive Modeling: Real estate house prediction in Bangalore, India"
 date: 2020-06-10
 tags: [machine learning, data science, data cleaning, deployment, feature engineering]
 header:
-  image: "/images/bangalore_prediction/home3.jpeg"
+  <!-- image: "/images/bangalore_prediction/home3.jpeg" -->
 excerpt: "Machine Learning, Linear Regression, Polynomial Regression, Data Science"
 ---
 
@@ -2433,6 +2433,15 @@ with open("columns.json", mode="w") as f:
 
 - this model is now ready for production!
 
+
+# References
+
+- (2020).url:https://en.wikipedia.org/wiki/Bangalore.(2020).url:https://www.machinehack.com/course/predicting- house- prices- in-bengaluru/ 
+
+- (2020).url:https://www.kaggle.com/amitabhajoy/bengaluru-house-price-data.Sheikh, Wasim, Dash, Mihir, and Sharma, Kshitiz 
+
+
+- (Nov. 2019).Trends in Residential Marketin Bangalore, India.doi:10.13140/RG.2.2.33967.89768.
 
 
 
