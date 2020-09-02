@@ -135,7 +135,7 @@ plt.imshow(np.transpose(grid, axes=(1,2,0)), cmap='gray');
 
 
 
-![png](images/pytorch_custom_model/output_9_1.png)
+![png](/images/pytorch_custom_model/output_9_1.png)
 
 
 As we can see from the above, the images are grayscale 28 by 28 images. Without further ado, lets define a simple network that will learn to map the inputs (images) to the correct class (class). To do this we will be using a classic way to program a neural network (i.e, using object oriented programming or OOP), train it over a few epochs (iterations) and inspect the results using a confusion matrix. Before we do this, lets define some functions we will be using..
@@ -362,7 +362,7 @@ plot_confusion_matrix(cm=confusion_matrix(y_true=train_set.targets, y_pred=all_p
 ```
 
 
-![png](images/pytorch_custom_model/output_19_0.png)
+![png](/images/pytorch_custom_model/output_19_0.png)
 
 
 ### test confusion matrix (out of sample performance)
@@ -380,7 +380,7 @@ plot_confusion_matrix(cm=confusion_matrix(y_true=train_set.targets, y_pred=all_p
 ```
 
 
-![png](images/pytorch_custom_model/output_22_0.png)
+![png](/images/pytorch_custom_model/output_22_0.png)
 
 
 ## Conclusion
