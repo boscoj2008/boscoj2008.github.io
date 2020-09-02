@@ -3,11 +3,11 @@ title: "Fashion MNIST classification using custom PyTorch Convolution Neural Net
 date: 2020-09-02
 tags: [Deep Learning, computer vision, image classification]
 header:
-  image: "/images/pytorch_custom_model/images.jpeg"
+  image: "/images/pytorch_custom_model/images.jpg"
 excerpt: "Deep Learning, computer vision, image classification"
 ---
 
-Hi, in today's post we are going to look at image classification using a simple PyTorch architecture. We're going to use the Fashion-MNIST data which a famous benchmarking dataset. Below is a brief summary of the Fashion-MNIST.
+Hi, in today's post we are going to look at image classification using a simple PyTorch architecture. We're going to use the Fashion-MNIST data, which is a famous benchmarking dataset. Below is a brief summary of the Fashion-MNIST.
 
 Fashion-MNIST is a dataset of Zalando's article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. Zalando intends Fashion-MNIST to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms. It shares the same image size and structure of training and testing splits.
 
