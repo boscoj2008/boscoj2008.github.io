@@ -24,9 +24,7 @@ Since Bangalore is a silicon valley with a slew of opportunities for many Indian
 
 # Data source 
 
-The data to be used were curated by a specialized team in India over months of primary and secondary research.  The data are also publicly available online and distributed under the creative commons license on the Kaggle platform [3] In primary research, the team collects data by themselves through conducting interviews, surveys and observations to meet a specific objective. This approach ensures that more information is available to the researcher than would be through secondary means. On the contrary, secondary research involves using data/results that have been already collected, organized, compiled and made available by other researchers through primary research. The advantage of this approach is that it is cheaper than primary methods. The two methods can be combined to assist an overall objective, in this case, the property market of Bangalore and customer buying dynamics. A total of about 13000 observations are included in the dataset as a result. 
-
-The variables under scrutiny are either categorical or continuous and cover details like; the area type which describes the type build in an area. Availability which indicates whether a house is available for possession or when it will be ready. Location which tells us where the residential property is situated in the metro. For example, along an airport highway. Price, which tells us the commercial value of the asset in lakhs or Indian rupee. Size, which refers to the number of bedrooms in a particular residential property. Bath tells us how many bath rooms a residence. Total square feet which gives a hint at the area the property occupies. The remaining variables like balcony and society detail how many balconies are on a property and which social group the property belongs.
+The data to be used were curated by a specialized team in India over months of primary and secondary research.  The data are also publicly available online and distributed under the creative commons license on the Kaggle platform [3]. The variables under scrutiny are either categorical or continuous and cover details like; the area type which describes the type build in an area. Availability which indicates whether a house is available for possession or when it will be ready. Location which tells us where the residential property is situated in the metro. For example, along an airport highway. Price, which tells us the commercial value of the asset in lakhs or Indian rupee. Size, which refers to the number of bedrooms in a particular residential property. Bath tells us how many bath rooms a residence. Total square feet which gives a hint at the area the property occupies. The remaining variables like balcony and society detail how many balconies are on a property and which social group the property belongs.
 
 
 
@@ -36,7 +34,7 @@ After acquiring the the data, the next steps will be to clean it (remove any out
 
 
 
-## Let's jump into the code!
+## Now let's jump right into the code!
 
 
 ```python
@@ -2436,13 +2434,13 @@ with open("columns.json", mode="w") as f:
 
 # References
 
-- (2020).url:https://en.wikipedia.org/wiki/Bangalore.
+- [1] https://en.wikipedia.org/wiki/Bangalore.
 
-- (2020).url:https://www.machinehack.com/course/predicting- house- prices- in-bengaluru/ 
+- [2] https://www.machinehack.com/course/predicting- house- prices- in-bengaluru/ 
 
-- (2020).url:https://www.kaggle.com/amitabhajoy/bengaluru-house-price-data.Sheikh, Wasim, Dash, Mihir, and Sharma, Kshitiz 
+- [3] https://www.kaggle.com/amitabhajoy/bengaluru-house-price-data.Sheikh, Wasim, Dash, Mihir, and Sharma, Kshitiz 
 
-- [1] (Nov. 2019).Trends in Residential Marketin Bangalore, India.doi:10.13140/RG.2.2.33967.89768.
+- [4] Trends in Residential Marketin Bangalore, India.doi:10.13140/RG.2.2.33967.89768.
 
 
 
