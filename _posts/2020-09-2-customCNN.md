@@ -387,7 +387,7 @@ plot_confusion_matrix(cm=confusion_matrix(y_true=train_set.targets, y_pred=all_p
 
 - model was slightly overfit
 - train accuracy was about 90% while the test accuracy was 78%
-- BN-CNN performed well but results could be improved with transfer learning which will be a future work to this task
+- We could train for more epochs, however, the BN-CNN performed well but results could be improved with transfer learning, which will be the future of this work.
 
 
 Thanks to the following for providing insights!
