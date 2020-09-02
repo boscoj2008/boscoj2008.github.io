@@ -105,7 +105,7 @@ train_set = torchvision.datasets.FashionMNIST(root="./", download=True,
                                               train=True,
                                               transform=transforms.Compose([transforms.ToTensor()]))
 
-test_set = train_set = torchvision.datasets.FashionMNIST(root="./", download=True, 
+test_set = torchvision.datasets.FashionMNIST(root="./", download=True, 
                                               train=False,
                                               transform=transforms.Compose([transforms.ToTensor()]))
 ```
