@@ -144,7 +144,7 @@ As we can see from the above, the images are grayscale 28 by 28 images. Without 
 ```python
 # define some helper functions
 def get_item(preds, labels):
-    """function that returns the accuracy of our archtecture"""
+    """function that returns the accuracy of our architecture"""
     return preds.argmax(dim=1).eq(labels).sum().item()
 
 @torch.no_grad() # turn off gradients during inference for memory effieciency
