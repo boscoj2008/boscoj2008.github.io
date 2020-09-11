@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: https:/about/
   - title: "Machine Learning"
-    url: https:/machine-learning/
+    url: /machine-learning/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
