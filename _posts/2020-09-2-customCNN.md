@@ -1,10 +1,10 @@
 ---
 title: "Fashion MNIST classification using custom PyTorch Convolution Neural Network (CNN)"
 date: 2020-09-02
-tags: [Deep Learning, computer vision, image classification]
+tags: [Deep Learning]
 header:
   image: "/images/pytorch_custom_model/images.jpg"
-excerpt: "Deep Learning, computer vision, image classification"
+excerpt: "computer vision, image classification, object oriented programming, Fashion MNIST"
 ---
 
 Hi, in today's post we are going to look at image classification using a simple PyTorch architecture. We're going to use the Fashion-MNIST data, which is a famous benchmarking dataset. Below is a brief summary of the Fashion-MNIST.

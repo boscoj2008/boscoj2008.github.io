@@ -1,10 +1,10 @@
 ---
 title: "Predictive Modeling: House price analytics Bangalore, India"
 date: 2020-06-10
-tags: [machine learning, data science, data cleaning, deployment, feature engineering]
+tags: [Regression]
 header:
   image: "/images/bangalore_prediction/homea.jpeg"
-excerpt: "Machine Learning, Linear Regression, Polynomial Regression, Data Science"
+excerpt: "data cleaning, deployment, feature engineering"
 ---
 
 # Housing situation in Bangalore, India.
