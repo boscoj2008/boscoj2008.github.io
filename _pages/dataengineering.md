@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: default
 permalink: /data-engineering/
 title: "Data engineering posts by tags"
 author_profile: true
@@ -17,3 +17,4 @@ header:
     {% include archive-single.html %}
   {% endfor %}
 {% endfor %}
+
