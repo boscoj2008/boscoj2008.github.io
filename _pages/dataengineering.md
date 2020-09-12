@@ -9,12 +9,12 @@ header:
 
 
 {% include base_path_2 %}
-{% include group-by-array collection=site.data_eng field="tags" %}
+{% include group-by-array collection=site.eng field="tags" %}
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
   <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
-  {% for post in data_eng %}
+  {% for post in eng %}
     {% include archive-single.html %}
   {% endfor %}
 {% endfor %}
