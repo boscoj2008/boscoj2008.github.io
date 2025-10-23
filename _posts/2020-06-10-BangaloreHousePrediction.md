@@ -3,7 +3,7 @@ title: "Predictive Modeling: House price analytics Bangalore, India"
 date: 2020-06-10
 tags: [Regression]
 header:
-  image: "/images/bangalore_prediction/homea.jpeg"
+  image: "/images/bangalore_prediction/home.jpeg"
 excerpt: "data cleaning, deployment, feature engineering"
 ---
 
