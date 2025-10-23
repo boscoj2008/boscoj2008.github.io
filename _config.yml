@@ -108,9 +108,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "John Bosco"
+  name             : "John Bosco Mugeni"
   avatar           :  "/images/code.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data Science Portfolio"
+  bio              : "Postdoctoral researcher in NLP"
   location         : "Tsukuba, Jp"
   email            :
   # github           : "boscoj2008"
