@@ -1,16 +1,5 @@
----
-title: "Predictive Modeling: House price analytics Bangalore, India"
-date: 2020-06-10
-tags: [Regression]
-header:
-  image: "/images/bangalore_prediction/homea.jpeg"
-  caption: "Housing in Bangalore"
-  overlay_filter: 0.3     # darkens or lightens the overlay
-  teaser: "/images/bangalore_prediction/home-thumb.jpeg"
-  image_description: "Aerial view of Bangalore housing"
-  image_height: "400px"   # only works in some themes
-excerpt: "data cleaning, deployment, feature engineering"
----
+<img src="/images/bangalore_prediction/home.jpeg" alt="Housing in Bangalore" width="70%">
+
 
 # Housing situation in Bangalore, India.
 
