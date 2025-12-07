@@ -132,8 +132,8 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/boscoj2008"
      - label: "CV"
-      # icon: "fas fa-fw fa-file-alt"
-      # url: "https://bustling-blender-005.notion.site/John-Bosco-Mugeni-Data-Engineer-22f67c55aa34803c8325e43c42c4440e"
+       icon: "fas fa-fw fa-file-alt"
+       url: "https://bustling-blender-005.notion.site/John-Bosco-Mugeni-Data-Engineer-22f67c55aa34803c8325e43c42c4440e"
 
 # Site Footer
 footer:
